@@ -40,7 +40,7 @@ public class OperacoesConjuntosSimples {
 
     public static Set<Set<Integer>> conjuntoDasPartes(Set<Integer> conjunto) {
         Set<Set<Integer>> partes = new HashSet<>();
-        partes.add(new HashSet<>()); // Adiciona o conjunto vazio
+        partes.add(new HashSet<>()); // Adicionando o conjunto vazio
 
         for (Integer elemento : conjunto) {
             Set<Set<Integer>> novasPartes = new HashSet<>();
