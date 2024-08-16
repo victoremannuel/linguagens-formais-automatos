@@ -2,7 +2,7 @@ package br.edu.ifgoiano;
 
 import java.util.*;
 
-public class ConjuntoOperacoes {
+public class OperacoesConjuntosSimples {
 
     public static void main(String[] args) {
         Set<Integer> A = new HashSet<>(Arrays.asList(2, 4));
@@ -24,7 +24,7 @@ public class ConjuntoOperacoes {
         diferenca.removeAll(B);
         System.out.println("Diferença (A - B): " + diferenca);
 
-        // Complemento de A em relação a U
+        // Complemento de A em U
         Set<Integer> complemento = new HashSet<>(U);
         complemento.removeAll(A);
         System.out.println("Complemento de A em U: " + complemento);
@@ -40,22 +40,16 @@ public class ConjuntoOperacoes {
 
     public static Set<Set<Integer>> conjuntoDasPartes(Set<Integer> conjunto) {
         Set<Set<Integer>> partes = new HashSet<>();
-        if (conjunto.isEmpty()) {
-            partes.add(new HashSet<>());
-            return partes;
-        }
+        partes.add(new HashSet<>()); // Adiciona o conjunto vazio
 
-        List<Integer> list = new ArrayList<>(conjunto);
-        Integer head = list.get(0);
-        Set<Integer> rest = new HashSet<>(list.subList(1, list.size()));
-
-        for (Set<Integer> subset : conjuntoDasPartes(rest)) {
-            Set<Integer> newSubset = new HashSet<>();
-            newSubset.add(head);
-            newSubset.addAll(subset);
-
-            partes.add(subset);
-            partes.add(newSubset);
+        for (Integer elemento : conjunto) {
+            Set<Set<Integer>> novasPartes = new HashSet<>();
+            for (Set<Integer> subset : partes) {
+                Set<Integer> novoSubset = new HashSet<>(subset);
+                novoSubset.add(elemento);
+                novasPartes.add(novoSubset);
+            }
+            partes.addAll(novasPartes);
         }
 
         return partes;
