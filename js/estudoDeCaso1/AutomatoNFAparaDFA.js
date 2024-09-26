@@ -123,8 +123,8 @@ function saveDFA(filePath, dfa) {
 
 // Função principal
 function main() {
-    const inputFilePath = '/workspaces/linguagens-formais-automatos/js/input/input.json';
-    const outputFilePath = '/workspaces/linguagens-formais-automatos/js/output/dfa.json';
+    const inputFilePath = '/workspaces/linguagens-formais-automatos/js/estudoDeCaso1/input/input.json';
+    const outputFilePath = '/workspaces/linguagens-formais-automatos/js/estudoDeCaso1/output/dfa.json';
 
     // Ler o NFA do arquivo JSON
     let nfa = loadNFA(inputFilePath);
