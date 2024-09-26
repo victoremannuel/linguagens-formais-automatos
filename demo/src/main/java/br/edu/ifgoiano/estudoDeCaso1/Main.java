@@ -1,4 +1,4 @@
-package br.edu.ifgoiano.laboratorio2;
+package br.edu.ifgoiano.estudoDeCaso1;
 
 public class Main {
     public static void main(String[] args) {

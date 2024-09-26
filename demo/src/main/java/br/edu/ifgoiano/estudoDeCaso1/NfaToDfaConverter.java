@@ -1,4 +1,4 @@
-package br.edu.ifgoiano.laboratorio2;
+package br.edu.ifgoiano.estudoDeCaso1;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
