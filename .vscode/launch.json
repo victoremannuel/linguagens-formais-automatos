@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "NFAtoDFAConverter",
+            "request": "launch",
+            "mainClass": "br.edu.ifgoiano.estudoDeCaso1.NFAtoDFAConverter",
+            "projectName": "demo"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
